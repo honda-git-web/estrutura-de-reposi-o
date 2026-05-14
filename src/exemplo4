@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class exemplo4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int valor, quantidadePar = 0, quantidadeImpar = 0;
+        int digito;
+
+        System.out.println("Digite um valor");
+        valor = sc.nextInt();
+
+        while (valor > 0) {
+            digito = valor % 10;
+            if (digito % 2 == 0) {
+                quantidadePar++;
+            }
+            else {
+                quantidadeImpar++;
+            }
+            valor =  valor / 10;
+        }
+        System.out.println("Quantidade de pares = " + quantidadePar + "\nQuantidade de impares = " + quantidadeImpar);
+    }
+}
