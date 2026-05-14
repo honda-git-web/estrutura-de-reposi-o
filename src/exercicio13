@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class exercicio13 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int binario, digito, expoente = 0, decimal = 0;
+
+        System.out.println("Digite um Binário");
+        binario = sc.nextInt();
+
+        while (binario >0) {
+            digito = binario % 10;
+            decimal = (int) (decimal + digito * Math.pow(2, expoente));
+            expoente++;
+            binario = binario / 10;
+        }
+        System.out.println(binario + "->" + decimal);
+
+    }
+}
